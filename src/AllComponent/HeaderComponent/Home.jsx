@@ -1,8 +1,10 @@
-
+import Banner from "../Banner/Banner";
+import BookApi from "../BookApi/BookApi";
 const Home = () => {
     return (
         <div>
-            <h1>Hello Home pages</h1>
+            <Banner></Banner>
+            <BookApi></BookApi>
         </div>
     );
 };
