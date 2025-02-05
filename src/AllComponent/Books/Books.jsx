@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 
 const Books = ({ books }) => {
-    const { bookName, author, image, rating, tags ,bookId} = books;
+    const { bookName, author, image, rating, tags ,bookId, category} = books;
     return (
         <Link to={`/book/${bookId}`}>
             <div className="card bg-base-100 w-96 shadow-sm p-6 rounded-3xl">
@@ -21,7 +21,7 @@ const Books = ({ books }) => {
                     <h3 className="text-base font-normal">By : {author}</h3>
                     <hr className="border-r-2 border-dashed my-4" />
                     <div className="card-actions justify-between my">
-                        <div className="badge ">Fiction</div>
+                        <div className="badge ">{category}</div>
                         <div className="badge ">{rating}
                             <div className="rating rating-xs">
                                 <input type="radio" name="rating-5" className="mask mask-star-2 bg-orange-400" aria-label="1 star" />
