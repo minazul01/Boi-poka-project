@@ -20,7 +20,7 @@ const BookApi = () => {
         </div>
         <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {
-                book.map(books => <Books key={book.bookId} books={books}></Books>)
+                book.map(books => <Books key={books.bookId} books={books}></Books>)
             }
         </div>
         </>

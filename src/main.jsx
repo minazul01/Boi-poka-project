@@ -12,6 +12,7 @@ import Root from './AllComponent/Root';
 import ErrorPage from './AllComponent/ErrorPage/ErrorPage';
 import Home from './AllComponent/HeaderComponent/Home';
 import DashBoard from './AllComponent/HeaderComponent/DashBoard';
+import BookDetail from './AllComponent/BookDetails/BookDetail';
 
 
 
@@ -26,9 +27,14 @@ const router = createBrowserRouter([
       element: <Home></Home>,
      },
      {
+      path: 'book/:bookId',
+      element: <BookDetail></BookDetail>,
+      loader: () => fetch('../public/data/booksData.json'),
+     },
+     {
       path: '/dashboard',
       element: <DashBoard></DashBoard>
-     }
+     },
     ]
   },
 ]);
